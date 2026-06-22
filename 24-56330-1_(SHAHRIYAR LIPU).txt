@@ -1,0 +1,105 @@
+#include <windows.h>  // for MS Windows
+#include <GL/glut.h>  // GLUT, include glu.h and gl.h
+
+void mydisplay() {
+    glClearColor(0.97,0.97,0.97,1); // soft background
+    glClear(GL_COLOR_BUFFER_BIT);
+
+    glPointSize(12);
+    glBegin(GL_POINTS);
+       //color
+        glColor3f(0.9,0.3,0.2);
+       //vertex
+        glVertex2f(0.0, 0.0);
+
+   
+       //2nd vertex
+        glColor3f(0.2,0.6,1.0);
+        glVertex2f(0.55, 0.55);
+    glEnd();
+
+    glBegin(GL_LINES);
+      //X-Axis
+        glColor3f(0.2,0.2,0.2);
+        glVertex2f(-1,0);
+        glVertex2f(1,0);
+       
+       //Y-Axis
+        glColor3f(0.2,0.2,0.2);
+        glVertex2f(0,-1);
+        glVertex2f(0, 1);
+    glEnd();
+
+
+    glBegin(GL_TRIANGLES);
+        // triangle
+        glColor3f(0.1,0.7,0.3);
+        glVertex2f(-0.65, -0.15);
+
+        glColor3f(0.0,0.5,0.2);
+        glVertex2f(-0.65, -0.55);
+
+        glColor3f(0.4,1.0,0.5);
+        glVertex2f(-0.25, -0.55);
+    glEnd();
+
+
+        //Quad
+    glBegin(GL_QUADS);
+        glColor3f(0.9,0.1,0.3);
+        glVertex2f(-0.75,0.75);
+
+        glColor3f(1,0.4,0.5);
+        glVertex2f(-0.75,0.45);
+
+        glColor3f(0.8,0.0,0.2);
+        glVertex2f(-0.45,0.45);
+
+        glColor3f(1,0.2,0.3);
+        glVertex2f(-0.45,0.75);
+
+        
+        glColor3f(0.2,0.7,0.9);
+        glVertex2f(-0.30,0.40);
+
+        glColor3f(0.1,0.5,0.8);
+        glVertex2f(-0.30,0.10);
+
+        glColor3f(0.0,0.4,0.7);
+        glVertex2f(-0.10,0.10);
+
+        glColor3f(0.6,0.9,1.0);
+        glVertex2f(-0.10,0.40);
+    glEnd();
+
+
+    glBegin(GL_POLYGON);
+        // pentagon
+
+        glColor3f(1.0,0.3,0.6);
+        glVertex2f(0.45,-0.15);
+
+        glColor3f(0.9,0.0,0.7);
+        glVertex2f(0.68,-0.30);
+
+        glColor3f(0.8,0.0,0.6);
+        glVertex2f(0.60,-0.55);
+
+        glColor3f(1.0,0.5,0.8);
+        glVertex2f(0.38,-0.55);
+
+        glColor3f(0.9,0.2,0.7);
+        glVertex2f(0.28,-0.32);
+    glEnd();
+
+    glFlush();
+}
+
+int main(int argc, char** argv) {
+    glutInit(&argc, argv);
+    glutInitWindowSize(320, 320);
+    glutCreateWindow("First Lab CG_K");
+    glutDisplayFunc(mydisplay);
+    glutMainLoop();
+    return 0;
+}
