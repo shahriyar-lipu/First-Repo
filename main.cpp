@@ -8,4 +8,6 @@ int main() {
     cout<< "The value of myNumber is: " << myNumber << endl;
 
     return 0;
+
+   cout<<"Tousif vai bolod.";
 }
