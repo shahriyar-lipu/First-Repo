@@ -10,4 +10,5 @@ int main() {
     return 0;
 
    cout<<"Tousif vai bolod.";
+   cout<<"Tousif vai valo lok.";
 }
